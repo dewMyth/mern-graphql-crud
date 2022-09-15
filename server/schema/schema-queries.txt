@@ -1,0 +1,112 @@
+### Get a Single Client ###
+# query {
+#   client(id:"63230ef7273874bf2bd162ca") {
+#     id,
+#     name,
+#     email,
+#     phone
+#   }
+# }
+
+
+## Get All Clients ###
+# query { clients {
+#     id,
+#     name,
+#     email,
+#     phone
+#   }
+# }
+
+
+# Get All Projects
+# query { projects {
+#     id,
+#     name,
+#   	description,
+#   	status,
+#   	client {
+#     id,
+#     name
+#   }
+#   }
+# }
+
+
+### Get a Single Project ###
+# query {
+#   project (id:"1"){
+#     id,
+#     name,
+#     description,status,
+#     client {
+#       id,
+#       name
+#     }
+#   }
+# }
+
+### Get a Single Project ###
+
+  # mutation {
+  #   addClient(
+  #     name : "Peter Parker2",
+  #     email: "spiderman2@gmail.com",
+  #     phone: "554-455-255"
+  #   ){
+  #     id,
+  #     name,
+  #     email,
+  #     phone
+  #   }
+  # }
+  
+  ### Delete a Client ###
+
+  # mutation {
+  #   deleteClient(id:"63231156605380bac7b696a4"){
+  #     name
+  #   }
+  # }
+
+### Add a Project ###
+
+# mutation {
+#   addProject(
+#     name: "Spiderman Noir Suit",
+#     description : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+#     status:completed,
+#     clientId:"63230f95273874bf2bd162d0"
+#   ){
+#     id,
+#     name,
+#     status,
+#     description,
+#     client{
+#       id
+#       name
+#     }
+#   }
+# }
+
+  ## Delete a Project ###
+
+  # mutation {
+  #   deleteProject(id:"632317b694ea5de50382016a"){
+  #     name
+  #   }
+  # }
+
+### Update a Project ###
+
+# mutation {
+#   updateProject(
+#     id:"6323188df101db0350e2cc37",
+#     name: "Spider-Man Noir Suit",
+#     status: progress
+#   ){
+#     id,
+#     name,
+#     status
+#   }
+# }
